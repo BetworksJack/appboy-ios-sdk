@@ -13,9 +13,7 @@ let package = Package(
     .library(name: "AppboyUI", targets: ["AppboyUI"]),
     .library(name: "AppboyPushStory", targets: ["AppboyPushStory"])
   ],
-  dependencies: [
-    .package(name: "SDWebImage", url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.8.2")
-  ],
+  dependencies: [],
   targets: [
     .binaryTarget(
       name: "AppboyKitLibrary",
@@ -24,7 +22,7 @@ let package = Package(
     ),
     .target(
       name: "AppboyKit",
-      dependencies: ["SDWebImage", "AppboyKitLibrary"],
+      dependencies: ["AppboyKitLibrary"],
       path: "AppboyKit",
       resources: [
         .process("Appboy.bundle"),
